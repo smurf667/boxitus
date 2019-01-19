@@ -13,14 +13,14 @@ http://www.engehausen.de/jan/bx.html
 If you know a level code, you can enter it on the main screen to jump directly to that level. Otherwise a click will run the first level.
 On a desktop you can move the player with the cursor keys. The space bar will restart the level should you hit a dead-end.
 
-There is rudimentary support for mobile devices using the motion sensor. You can hold the device flat (i.e. its underside is facing the ground) or upright. In both cases you must hold it in landscape mode. It is recommended to turn off auto-rotation.
+There is rudimentary support for mobile devices using the motion sensor. Tilt the device into the direction you want the player to move. It is recommended to turn off auto-rotation.
 
 ![Level screenshot](screens/game.jpg)
 
 ## Building the game
 
 You'll need Typescript - you can install it via `npm install -g typescript`. Make sure the dependencies are resolved by running `npm install`.
-Then execute `npm run build --production` to build the game. Open `src/index.html` in a browser; this gives will run the game.
+Then execute `npm run build --production` to build the game. Open `src/index.html` in a browser; this will run the game.
 
 ## Building the editor
 
