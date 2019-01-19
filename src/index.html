@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <!--
+    Copyright 2018 Jan Engehausen, smurf667@gmail.com
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+  -->
+  <head>
+    <meta charset="utf-8" />
+    <title>Boxitus</title>
+    <style>
+body { font-family: Sans-Serif; }
+
+@media screen and (orientation:portrait) {
+  .main { display: none }
+  .info { display: block; color: white; text-align: center }
+  .qr { display: block; position: absolute; bottom: 0px; right: 0px; height: 10% }
+  .fs { display: none }
+}
+
+@media screen and (orientation:landscape) {
+  .main { display: block }
+  .info { display: none }
+  .qr { display: block; position: absolute; bottom: 0px; right: 0px; width: 10% }
+  .fs { display: block; position: absolute; top: 8px; left: 8px; z-index: 512 }
+}
+    </style>
+  </head>
+  <body style="background-color:#000">
+    <script src="../dist/main.js"></script>
+    <img src="qr.png" class="qr">
+  </body>
+</html>
