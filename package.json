@@ -1,7 +1,7 @@
 {
     "name": "boxitus",
     "version": "0.0.1",
-    "description": "orbox b clone for easter egg purposes",
+    "description": "Orbox B logic game clone",
     "private": true,
     "main": "./dist/index",
     "types": "./dist/index",
