@@ -301,9 +301,13 @@ export class Level {
     const old = this.tileAt(x, y);
     this.tiles[y][x] = undefined;
     if (tile && old instanceof Overlap) {
-      if (!(old as Overlap).removeChild(tile)) {
-        return;
+      const replace =  (old as Overlap).removeChild(tile);
+      if (replace !== undefined) {
+        this.tiles[y][x] = replace;
+      } else {
+        this.tiles[y][x] = old;
       }
+      return;
     }
     const idx = this.activeTiles.indexOf(old);
     if (idx >= 0) {

@@ -44,17 +44,16 @@ export class Overlap extends Tile {
   /**
    * Removes the given tile from the list of overlapping tiles
    * @param tile the tile to remove
-   * @returns true if the overlap does not hold children any more
+   * @returns the remaining tile, if child count is less than two
    */
-  public removeChild(tile: Tile): boolean {
+  public removeChild(tile: Tile): Tile {
     const idx = this.tiles.indexOf(tile);
     if (idx >= 0) {
       this.tiles.splice(idx, 1);
       // technically, remove SVGElement of tile from group, but for traps I want to keep them around
       // traps are the only things that overlap, so...
     }
-    // return true if childless
-    return this.tiles.length === 0;
+    return this.tiles.length == 1 ? this.tiles[0] : undefined;
   }
 
   /**
