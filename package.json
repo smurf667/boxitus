@@ -12,7 +12,7 @@
         "doc": "typedoc --out target/tsdoc src"
     },
     "author": "Jan Engehausen",
-    "license": "MIT",
+    "license": "Apache 2.0",
     "devDependencies": {
         "typescript": "3.2.2",
         "typedoc": "0.14.1",
