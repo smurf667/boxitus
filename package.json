@@ -1,6 +1,6 @@
 {
     "name": "boxitus",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Orbox B logic game clone",
     "private": true,
     "main": "./dist/index",
@@ -9,7 +9,8 @@
         "dev": "tsc --watch & nodemon dist",
         "build": "tsc && webpack",
         "lint": "tslint -c tslint.json 'src/**/*.ts'",
-        "doc": "typedoc --out target/tsdoc src"
+        "doc": "typedoc --out target/tsdoc src",
+        "preinstall": "npx npm-force-resolutions"
     },
     "author": "Jan Engehausen",
     "license": "Apache 2.0",
@@ -17,12 +18,15 @@
         "serialize-javascript": "2.1.1",
         "tslint": "5.12.0",
         "tslint-eslint-rules": "5.4.0",
-        "typedoc": "0.15.0",
-        "typescript": "3.2.2",
-        "webpack": "4.16.0",
+        "typedoc": "0.17.3",
+        "typescript": "3.8.3",
+        "webpack": "4.42.0",
         "webpack-cli": "3.0.8"
     },
     "dependencies": {
-        "npm": "6.13.4"
+        "npm": "^6.14.3"
+    },
+    "resolutions": {
+        "minimist": "1.2.5"
     }
 }
